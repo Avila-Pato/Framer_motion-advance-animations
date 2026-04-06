@@ -2,6 +2,7 @@
 import Lenis from "lenis";
 import React, { useEffect } from "react";
 import GalleryImg from "./components/Gallery";
+import Description from "./components/description";
 import { useSpring } from 'framer-motion'
 
 const projects = [
@@ -65,6 +66,7 @@ useEffect(() => {
         return <GalleryImg key={i} handle={handle} mousePosition={mousePosition} />
        })
       }
-    </main>  
+      <Description mousePosition={mousePosition} projects={projects} />
+    </main>
   );
 }
