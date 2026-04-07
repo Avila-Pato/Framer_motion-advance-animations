@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1a1a1a;
+    color: white;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 70vw;
+    gap: 20px;
+}
+
+.line {
+    height: 1px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+
+    svg {
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        top: -50px;
+        overflow: visible;
+
+        path {
+            stroke-width: 1px;
+            stroke: white;
+            fill: none;
+        }
+    }
+}
+
+.box {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: -20px;
+    z-index: 1;
+    cursor: pointer;
+    transition: height 0.3s ease, top 0.3s ease;
+
+    &:hover {
+        height: 150px;
+        top: -75px;
+    }
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    p:first-child {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    p:last-child {
+        width: 40%;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        opacity: 0.7;
+    }
+}
+
+.tagsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+
+    > p {
+        font-size: 0.85rem;
+        opacity: 0.5;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 40%;
+
+    p {
+        border: 1px solid rgba(255,255,255,0.3);
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        opacity: 0.8;
+    }
+}
